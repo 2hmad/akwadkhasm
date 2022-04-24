@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Cairo", sans-serif !important;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#app-ar {
+  direction: rtl;
+  text-align: right;
+}
+
+#app-en {
+  direction: ltr;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.headers .header {
+  background-color: #03ad94;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 30px;
+}
+
+.headers .header .brand {
+  max-width: 200px;
+}
+
+.headers .header .brand img {
+  width: 100%;
+  height: 100%;
+}
+
+.headers .header .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.headers .header .search .lang {
+  color: white;
+  text-align: left;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.headers .header .search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.headers .header .search form input {
+  padding: 7px 30px;
+  border-radius: 3px;
+  border: none;
+  width: 350px;
+  outline: none;
+  border-radius: 30px;
+}
+
+.headers .header .search form button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  -webkit-transform: translate(0px, 3px);
+          transform: translate(0px, 3px);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.headers .header .search form button img {
+  width: 22px;
+}
+
+.headers .subheader {
+  background-color: white;
+  padding: 20px 25px;
+}
+
+.headers .subheader .cats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.headers .subheader .cats li {
+  font-size: 17px;
+  color: #dd9933;
+  font-weight: 600;
+}
+/*# sourceMappingURL=main.css.map */
