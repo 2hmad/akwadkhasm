@@ -1,0 +1,106 @@
+.index-page {
+  .carousel {
+    width: 100%;
+    .swiper-slide {
+      height: 320px;
+      width: 100% !important;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .content {
+    margin-top: 3%;
+    h2 {
+      color: $secondary;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 15px;
+      margin-top: 3%;
+      .card {
+        background-color: white;
+        width: 442px;
+        height: 250px;
+        border-radius: 7px;
+        padding: 15px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid rgb(235, 235, 235);
+          .brand {
+            max-width: 90px;
+            img {
+              width: 100%;
+            }
+          }
+          .share {
+            background-color: transparent;
+            border: none;
+            max-width: 25px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        .content {
+          border-bottom: 1px solid rgb(235, 235, 235);
+          padding-bottom: 5%;
+          h3 {
+            font-weight: 400;
+          }
+        }
+        .footer {
+          margin-top: 3%;
+          .copoun {
+            background-color: rgb(235, 235, 235);
+            padding: 7px;
+            text-align: center;
+            border-radius: 5px;
+            position: relative;
+            span {
+              user-select: none;
+              font-size: 18px;
+              font-weight: 700;
+            }
+            button {
+              background-color: $primary;
+              padding: 3px 25px;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              font-size: 15px;
+              float: left;
+            }
+          }
+          .offer {
+            width: 100%;
+            background-color: $primary;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

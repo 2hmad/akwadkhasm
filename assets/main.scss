@@ -1,5 +1,7 @@
 $primary: #03ad94;
+$secondary: #404040;
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -24,4 +26,75 @@ a {
 ul {
   list-style: none;
 }
+button {
+  cursor: pointer;
+}
+.see-more {
+  background-color: transparent;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  padding: 5px 25px;
+  font-size: 15px;
+  color: #03ad94;
+  font-weight: 600;
+  transition: 0.4s;
+  margin-top: 5%;
+  display: block;
+  &:hover {
+    background-color: $primary;
+    color: white;
+  }
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.sides {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  justify-content: space-between;
+  .side {
+    &:nth-child(1) {
+      max-width: 900px;
+    }
+    &:nth-child(2) {
+      max-width: 370px;
+      .fav-stores {
+        h3 {
+          font-weight: 500;
+          font-size: 20px;
+          color: $secondary;
+        }
+        .stores {
+          border-radius: 3px;
+          text-align: center;
+          margin-top: 3%;
+          width: 100%;
+          height: 100%;
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            li {
+              .store {
+                background-color: white;
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
 @import "components/navbar";
+@import "pages/index";
