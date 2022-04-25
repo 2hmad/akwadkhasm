@@ -1,0 +1,41 @@
+.cats-page {
+  .content {
+    margin-top: 3%;
+    h1 {
+      color: $secondary;
+    }
+    h2 {
+      font-size: 23px;
+      color: $secondary;
+    }
+    .cats {
+      display: flex;
+      margin-top: 5%;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 50px;
+      .cat {
+        width: 250px;
+        .cat-h {
+          border-bottom: 1px solid rgb(209, 209, 209);
+          padding-bottom: 5%;
+          h4 {
+            font-size: 18px;
+            color: $secondary;
+            font-weight: 500;
+          }
+        }
+        .cat-subs {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          margin-top: 10px;
+          a {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

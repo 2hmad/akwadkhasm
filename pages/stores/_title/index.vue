@@ -1,7 +1,7 @@
 <template>
   <div :id="`app-${this.$i18n.locale}`">
     <div class="store-page">
-      <navbar />
+      <Navbar />
       <div class="container">
         <div class="sides">
           <div class="side">
@@ -21,10 +21,10 @@
                 />
                 <div>
                   <h1>
-                    {{ $t("copouns-and-discounts") }} نون
-                    {{ new Date().getFullYear() }} {{ $t("active-copouns") }}
+                    {{ $t("coupons-and-discounts") }} نون
+                    {{ new Date().getFullYear() }} {{ $t("active-coupons") }}
                   </h1>
-                  <p style="display: block">11 {{ $t("copouns") }}</p>
+                  <p style="display: block">11 {{ $t("coupons") }}</p>
                 </div>
               </div>
               <div class="cards">
@@ -52,7 +52,7 @@
                   </div>
                   <div class="footer">
                     <NuxtLink to="/">
-                      <div class="copoun">
+                      <div class="coupon">
                         <span> DG2 </span>
                         <button>{{ $t("copy") }}</button>
                       </div>
@@ -73,7 +73,7 @@
         </div>
       </div>
     </div>
-    <footer />
+    <Footer />
   </div>
 </template>
 

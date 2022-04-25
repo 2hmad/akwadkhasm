@@ -5,6 +5,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     .brand {
       max-width: 200px;
       img {
@@ -55,6 +59,48 @@
         font-size: 17px;
         color: #dd9933;
         font-weight: 600;
+      }
+    }
+    .open {
+      display: none;
+    }
+    .sidebar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: 9999;
+      background-color: white;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      img {
+        width: 25px;
+        position: absolute;
+        top: 15px;
+        right: 7px;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        li {
+          font-size: 17px;
+          color: #dd9933;
+          font-weight: 600;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .cats {
+        display: none;
+      }
+      .open {
+        display: block;
       }
     }
   }

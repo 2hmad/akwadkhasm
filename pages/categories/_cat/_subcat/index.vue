@@ -1,19 +1,10 @@
 <template>
   <div :id="`app-${this.$i18n.locale}`">
-    <div class="index-page">
+    <div class="cat-page">
       <Navbar />
       <div class="container">
         <div class="sides">
           <div class="side">
-            <div class="carousel">
-              <swiper class="swiper">
-                <swiper-slide>
-                  <a href="#">
-                    <img src="https://cdn.almowafir.com/1/Shein-AR.jpeg" />
-                  </a>
-                </swiper-slide>
-              </swiper>
-            </div>
             <div class="content">
               <h1>
                 {{ $t("coupons-and-discounts") }} {{ new Date().getFullYear() }}
@@ -69,16 +60,7 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  directives: {
-    swiper: directive,
-  },
   date() {
     return {};
   },

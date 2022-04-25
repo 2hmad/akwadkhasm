@@ -10,14 +10,21 @@ $secondary: #404040;
 }
 body {
   background-color: #f1f1f1;
+  min-height: 100vh;
 }
 #app-ar {
   direction: rtl;
   text-align: right;
+  .lang {
+    text-align: left;
+  }
 }
 #app-en {
   direction: ltr;
   text-align: left;
+  .lang {
+    text-align: right;
+  }
 }
 a {
   text-decoration: none;
@@ -97,6 +104,10 @@ button {
   }
 }
 @import "components/navbar";
+@import "components/footer";
 @import "pages/index";
 @import "pages/stores";
 @import "pages/store";
+@import "pages/categories";
+@import "pages/category";
+@import "pages/redirect";

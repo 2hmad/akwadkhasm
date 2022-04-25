@@ -1,12 +1,12 @@
 <template>
   <nav class="headers">
     <div class="header">
-      <div class="brand">
+      <div
+        class="brand"
+        style="width: 200px; height: 84px; border: 1px solid #ccc"
+      >
         <a href="/">
-          <img
-            src="https://cdn.almowafir.com/1/alm_logo_r2021_ar.png"
-            :alt="`${$t('akwadkhasm')}`"
-          />
+          <img src="" :alt="`${$t('akwadkhasm')}`" />
         </a>
       </div>
       <div class="search">
@@ -38,9 +38,29 @@
           <NuxtLink to="/"> {{ $t("offers") }} </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/">{{ $t("all-categories") }}</NuxtLink>
+          <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
+        </li>
+        <li v-for="n in 10">
+          <NuxtLink to="/">الكترونيات</NuxtLink>
         </li>
       </ul>
+      <div class="open" @click="openSideBar">
+        <img src="/icons/bar.svg" />
+      </div>
+      <div class="sidebar" style="display: none">
+        <img src="/icons/close.svg" @click="closeSideBar" />
+        <ul>
+          <li>
+            <NuxtLink to="/"> {{ $t("offers") }} </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
+          </li>
+          <li v-for="n in 10">
+            <NuxtLink to="/">الكترونيات</NuxtLink>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </template>
@@ -48,6 +68,14 @@
 export default {
   data() {
     return {};
+  },
+  methods: {
+    openSideBar() {
+      document.querySelector(".sidebar").style.display = "flex";
+    },
+    closeSideBar() {
+      document.querySelector(".sidebar").style.display = "none";
+    },
   },
 };
 </script>

@@ -1,0 +1,28 @@
+.redirect-page {
+  .container {
+    text-align: center;
+    line-height: 3em;
+    margin-top: 3%;
+    h2 {
+      font-weight: 500;
+      font-size: 25px;
+    }
+    p {
+      color: $secondary;
+    }
+    .coupon {
+      background-color: #ebebeb;
+      max-width: 250px;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 20px;
+      margin: 0 auto;
+    }
+    .counter {
+      font-size: 30px;
+      font-weight: bold;
+      color: $primary;
+    }
+  }
+}

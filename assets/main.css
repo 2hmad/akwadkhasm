@@ -9,6 +9,7 @@
 
 body {
   background-color: #f1f1f1;
+  min-height: 100vh;
 }
 
 #app-ar {
@@ -16,9 +17,17 @@ body {
   text-align: right;
 }
 
+#app-ar .lang {
+  text-align: left;
+}
+
 #app-en {
   direction: ltr;
   text-align: left;
+}
+
+#app-en .lang {
+  text-align: right;
 }
 
 a {
@@ -136,6 +145,16 @@ button {
   padding: 15px 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .headers .header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .headers .header .brand {
   max-width: 200px;
 }
@@ -207,6 +226,113 @@ button {
   font-size: 17px;
   color: #dd9933;
   font-weight: 600;
+}
+
+.headers .subheader .open {
+  display: none;
+}
+
+.headers .subheader .sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.headers .subheader .sidebar img {
+  width: 25px;
+  position: absolute;
+  top: 15px;
+  right: 7px;
+}
+
+.headers .subheader .sidebar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.headers .subheader .sidebar ul li {
+  font-size: 17px;
+  color: #dd9933;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .headers .subheader .cats {
+    display: none;
+  }
+  .headers .subheader .open {
+    display: block;
+  }
+}
+
+.footer-page {
+  margin-top: 5%;
+  width: 100%;
+  padding: 20px 5%;
+  border-top: 1px solid #dfdfdf;
+}
+
+.footer-page ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer-page ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-page ul li h3 {
+  color: #404040;
+  font-size: 17px;
+}
+
+.footer-page ul li a {
+  color: #777777;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer-page ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-page .rights {
+  margin-top: 2%;
+  text-align: left;
+  color: #777777;
 }
 
 .index-page .carousel {
@@ -320,7 +446,7 @@ button {
   margin-top: 3%;
 }
 
-.index-page .content .cards .card .footer .copoun {
+.index-page .content .cards .card .footer .coupon {
   background-color: #ebebeb;
   padding: 7px;
   text-align: center;
@@ -328,7 +454,7 @@ button {
   position: relative;
 }
 
-.index-page .content .cards .card .footer .copoun span {
+.index-page .content .cards .card .footer .coupon span {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -337,7 +463,7 @@ button {
   font-weight: 700;
 }
 
-.index-page .content .cards .card .footer .copoun button {
+.index-page .content .cards .card .footer .coupon button {
   background-color: #03ad94;
   padding: 3px 25px;
   color: white;
@@ -527,7 +653,7 @@ button {
   margin-top: 3%;
 }
 
-.store-page .content .cards .card .footer .copoun {
+.store-page .content .cards .card .footer .coupon {
   background-color: #ebebeb;
   padding: 7px;
   text-align: center;
@@ -535,7 +661,7 @@ button {
   position: relative;
 }
 
-.store-page .content .cards .card .footer .copoun span {
+.store-page .content .cards .card .footer .coupon span {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -544,7 +670,7 @@ button {
   font-weight: 700;
 }
 
-.store-page .content .cards .card .footer .copoun button {
+.store-page .content .cards .card .footer .coupon button {
   background-color: #03ad94;
   padding: 3px 25px;
   color: white;
@@ -562,5 +688,221 @@ button {
   border: none;
   color: white;
   font-weight: 700;
+}
+
+.cats-page .content {
+  margin-top: 3%;
+}
+
+.cats-page .content h1 {
+  color: #404040;
+}
+
+.cats-page .content h2 {
+  font-size: 23px;
+  color: #404040;
+}
+
+.cats-page .content .cats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5%;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+}
+
+.cats-page .content .cats .cat {
+  width: 250px;
+}
+
+.cats-page .content .cats .cat .cat-h {
+  border-bottom: 1px solid #d1d1d1;
+  padding-bottom: 5%;
+}
+
+.cats-page .content .cats .cat .cat-h h4 {
+  font-size: 18px;
+  color: #404040;
+  font-weight: 500;
+}
+
+.cats-page .content .cats .cat .cat-subs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.cats-page .content .cats .cat .cat-subs a {
+  color: #03ad94;
+}
+
+.cat-page .content {
+  margin-top: 3%;
+}
+
+.cat-page .content h1 {
+  font-size: 25px;
+  color: #404040;
+}
+
+.cat-page .content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 15px;
+  margin-top: 3%;
+}
+
+.cat-page .content .cards .card {
+  background-color: white;
+  width: 442px;
+  height: 250px;
+  border-radius: 7px;
+  padding: 15px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .cat-page .content .cards .card {
+    width: 100%;
+  }
+}
+
+.cat-page .content .cards .card .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.cat-page .content .cards .card .header .brand {
+  max-width: 90px;
+}
+
+.cat-page .content .cards .card .header .brand img {
+  width: 100%;
+}
+
+.cat-page .content .cards .card .header .share {
+  background-color: transparent;
+  border: none;
+  max-width: 25px;
+}
+
+.cat-page .content .cards .card .header .share img {
+  width: 100%;
+  height: 100%;
+}
+
+.cat-page .content .cards .card .content {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 5%;
+}
+
+.cat-page .content .cards .card .content h3 {
+  font-weight: 400;
+}
+
+.cat-page .content .cards .card .footer {
+  margin-top: 3%;
+}
+
+.cat-page .content .cards .card .footer .coupon {
+  background-color: #ebebeb;
+  padding: 7px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.cat-page .content .cards .card .footer .coupon span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cat-page .content .cards .card .footer .coupon button {
+  background-color: #03ad94;
+  padding: 3px 25px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  float: left;
+}
+
+.cat-page .content .cards .card .footer .offer {
+  width: 100%;
+  background-color: #03ad94;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+.redirect-page .container {
+  text-align: center;
+  line-height: 3em;
+  margin-top: 3%;
+}
+
+.redirect-page .container h2 {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.redirect-page .container p {
+  color: #404040;
+}
+
+.redirect-page .container .coupon {
+  background-color: #ebebeb;
+  max-width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.redirect-page .container .counter {
+  font-size: 30px;
+  font-weight: bold;
+  color: #03ad94;
 }
 /*# sourceMappingURL=main.css.map */
