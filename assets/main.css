@@ -45,11 +45,11 @@ button {
 
 .see-more {
   background-color: transparent;
-  border: 1px solid #03ad94;
+  border: 1px solid #1475bc;
   border-radius: 5px;
   padding: 5px 25px;
   font-size: 15px;
-  color: #03ad94;
+  color: #1475bc;
   font-weight: 600;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -58,7 +58,7 @@ button {
 }
 
 .see-more:hover {
-  background-color: #03ad94;
+  background-color: #1475bc;
   color: white;
 }
 
@@ -132,7 +132,7 @@ button {
 }
 
 .headers .header {
-  background-color: #03ad94;
+  background-color: #1475bc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,7 +224,7 @@ button {
 
 .headers .subheader .cats li {
   font-size: 17px;
-  color: #dd9933;
+  color: #3c405b;
   font-weight: 600;
 }
 
@@ -232,10 +232,30 @@ button {
   display: none;
 }
 
+@-webkit-keyframes leftToright {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes leftToright {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
 .headers .subheader .sidebar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  -webkit-animation: leftToright 0.3s;
+          animation: leftToright 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -274,7 +294,7 @@ button {
 
 .headers .subheader .sidebar ul li {
   font-size: 17px;
-  color: #dd9933;
+  color: #3c405b;
   font-weight: 600;
 }
 
@@ -464,7 +484,7 @@ button {
 }
 
 .index-page .content .cards .card .footer .coupon button {
-  background-color: #03ad94;
+  background-color: #1475bc;
   padding: 3px 25px;
   color: white;
   border: none;
@@ -475,7 +495,7 @@ button {
 
 .index-page .content .cards .card .footer .offer {
   width: 100%;
-  background-color: #03ad94;
+  background-color: #1475bc;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -671,7 +691,7 @@ button {
 }
 
 .store-page .content .cards .card .footer .coupon button {
-  background-color: #03ad94;
+  background-color: #1475bc;
   padding: 3px 25px;
   color: white;
   border: none;
@@ -682,7 +702,7 @@ button {
 
 .store-page .content .cards .card .footer .offer {
   width: 100%;
-  background-color: #03ad94;
+  background-color: #1475bc;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -745,7 +765,7 @@ button {
 }
 
 .cats-page .content .cats .cat .cat-subs a {
-  color: #03ad94;
+  color: #1475bc;
 }
 
 .cat-page .content {
@@ -856,7 +876,7 @@ button {
 }
 
 .cat-page .content .cards .card .footer .coupon button {
-  background-color: #03ad94;
+  background-color: #1475bc;
   padding: 3px 25px;
   color: white;
   border: none;
@@ -867,7 +887,7 @@ button {
 
 .cat-page .content .cards .card .footer .offer {
   width: 100%;
-  background-color: #03ad94;
+  background-color: #1475bc;
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -903,6 +923,128 @@ button {
 .redirect-page .container .counter {
   font-size: 30px;
   font-weight: bold;
-  color: #03ad94;
+  color: #1475bc;
+}
+
+.search-page .container {
+  margin-top: 3%;
+}
+
+.search-page .container .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 15px;
+  margin-top: 3%;
+}
+
+.search-page .container .cards .card {
+  background-color: white;
+  width: 400px;
+  height: 250px;
+  border-radius: 7px;
+  padding: 15px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .search-page .container .cards .card {
+    width: 100%;
+  }
+}
+
+.search-page .container .cards .card .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.search-page .container .cards .card .header .brand {
+  max-width: 90px;
+}
+
+.search-page .container .cards .card .header .brand img {
+  width: 100%;
+}
+
+.search-page .container .cards .card .header .share {
+  background-color: transparent;
+  border: none;
+  max-width: 25px;
+}
+
+.search-page .container .cards .card .header .share img {
+  width: 100%;
+  height: 100%;
+}
+
+.search-page .container .cards .card .content {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 5%;
+}
+
+.search-page .container .cards .card .content h3 {
+  font-weight: 400;
+}
+
+.search-page .container .cards .card .footer {
+  margin-top: 3%;
+}
+
+.search-page .container .cards .card .footer .coupon {
+  background-color: #ebebeb;
+  padding: 7px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.search-page .container .cards .card .footer .coupon span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.search-page .container .cards .card .footer .coupon button {
+  background-color: #1475bc;
+  padding: 3px 25px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  float: left;
+}
+
+.search-page .container .cards .card .footer .offer {
+  width: 100%;
+  background-color: #1475bc;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */

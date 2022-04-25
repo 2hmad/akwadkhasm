@@ -1,5 +1,6 @@
-$primary: #03ad94;
+$primary: #1475bc;
 $secondary: #404040;
+$third: #3c405b;
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap");
 
 * {
@@ -42,7 +43,7 @@ button {
   border-radius: 5px;
   padding: 5px 25px;
   font-size: 15px;
-  color: #03ad94;
+  color: $primary;
   font-weight: 600;
   transition: 0.4s;
   margin-top: 5%;
@@ -111,3 +112,4 @@ button {
 @import "pages/categories";
 @import "pages/category";
 @import "pages/redirect";
+@import "pages/search";

@@ -57,15 +57,25 @@
       gap: 25px;
       li {
         font-size: 17px;
-        color: #dd9933;
+        color: $third;
         font-weight: 600;
       }
     }
     .open {
       display: none;
     }
+    @keyframes leftToright {
+      0% {
+        left: 100%;
+      }
+      100% {
+        left: 0%;
+      }
+    }
     .sidebar {
-      display: flex;
+      display: none;
+      animation: leftToright 0.3s;
+      transition: 0.3s;
       align-items: center;
       justify-content: center;
       width: 100%;
@@ -90,7 +100,7 @@
         gap: 10px;
         li {
           font-size: 17px;
-          color: #dd9933;
+          color: $third;
           font-weight: 600;
         }
       }

@@ -34,9 +34,9 @@
     </div>
     <div class="subheader">
       <ul class="cats">
-        <li>
+        <!-- <li>
           <NuxtLink to="/"> {{ $t("offers") }} </NuxtLink>
-        </li>
+        </li> -->
         <li>
           <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
         </li>

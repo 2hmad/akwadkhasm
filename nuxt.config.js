@@ -39,10 +39,18 @@ export default {
       { code: "en", iso: "en-US", file: "en.json", name: "English" },
     ],
     defaultLocale: "ar",
-    fallbackLocale: "en",
-    strategies: "prefix_except_default",
+    vueI18n: {
+      locale: "ar",
+      fallbackLocale: "ar",
+    },
+    strategy: "no_prefix",
     langDir: "lang/",
-    lazy: true,
+    seo: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+    },
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
