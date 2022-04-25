@@ -2,10 +2,12 @@
   <nav class="headers">
     <div class="header">
       <div class="brand">
-        <img
-          src="https://cdn.almowafir.com/1/alm_logo_r2021_ar.png"
-          :alt="`${$t('akwadkhasm')}`"
-        />
+        <a href="/">
+          <img
+            src="https://cdn.almowafir.com/1/alm_logo_r2021_ar.png"
+            :alt="`${$t('akwadkhasm')}`"
+          />
+        </a>
       </div>
       <div class="search">
         <div class="lang">
@@ -37,9 +39,6 @@
         </li>
         <li>
           <NuxtLink to="/">{{ $t("all-categories") }}</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/">{{ $t("all-stores") }}</NuxtLink>
         </li>
       </ul>
     </div>

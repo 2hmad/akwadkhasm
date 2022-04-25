@@ -1,6 +1,6 @@
 <template>
   <div :id="`app-${this.$i18n.locale}`">
-    <div class="index-page">
+    <div class="store-page">
       <navbar />
       <div class="container">
         <div class="sides">
@@ -15,9 +15,18 @@
               </swiper>
             </div>
             <div class="content">
-              <h1>
-                {{ $t("copouns-and-discounts") }} {{ new Date().getFullYear() }}
-              </h1>
+              <div class="header">
+                <img
+                  src="https://cdn.almowafir.com/store_logos/noon_dg4_ar.png"
+                />
+                <div>
+                  <h1>
+                    {{ $t("copouns-and-discounts") }} نون
+                    {{ new Date().getFullYear() }} {{ $t("active-copouns") }}
+                  </h1>
+                  <p style="display: block">11 {{ $t("copouns") }}</p>
+                </div>
+              </div>
               <div class="cards">
                 <div class="card" v-for="n in 6">
                   <div class="header">

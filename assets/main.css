@@ -158,7 +158,6 @@ button {
 
 .headers .header .search .lang {
   color: white;
-  text-align: left;
   font-weight: 600;
   font-size: 17px;
 }
@@ -235,7 +234,8 @@ button {
   margin-top: 3%;
 }
 
-.index-page .content h2 {
+.index-page .content h1 {
+  font-size: 23px;
   color: #404040;
 }
 
@@ -348,6 +348,213 @@ button {
 }
 
 .index-page .content .cards .card .footer .offer {
+  width: 100%;
+  background-color: #03ad94;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+.stores-page .content {
+  margin-top: 3%;
+}
+
+.stores-page .content h1 {
+  color: #404040;
+}
+
+.stores-page .content h2 {
+  font-size: 23px;
+  color: #404040;
+}
+
+.stores-page .content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 15px;
+  margin-top: 3%;
+}
+
+.stores-page .content .cards .card {
+  background-color: white;
+  width: 200px;
+  height: 100px;
+  border-radius: 7px;
+  padding: 10px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .stores-page .content .cards .card {
+    width: 100%;
+  }
+}
+
+.stores-page .content .cards .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.store-page .carousel {
+  width: 100%;
+}
+
+.store-page .carousel .swiper-slide {
+  height: 320px;
+  width: 100% !important;
+}
+
+.store-page .carousel .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.store-page .carousel img {
+  width: 100%;
+  height: 100%;
+}
+
+.store-page .content {
+  margin-top: 3%;
+}
+
+.store-page .content .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.store-page .content .header img {
+  background-color: white;
+  padding: 10px;
+  max-width: 200px;
+}
+
+.store-page .content .header h1 {
+  font-size: 30px;
+  color: #404040;
+}
+
+.store-page .content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  gap: 15px;
+  margin-top: 3%;
+}
+
+.store-page .content .cards .card {
+  background-color: white;
+  width: 442px;
+  height: 250px;
+  border-radius: 7px;
+  padding: 15px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .store-page .content .cards .card {
+    width: 100%;
+  }
+}
+
+.store-page .content .cards .card .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.store-page .content .cards .card .header .brand {
+  max-width: 90px;
+}
+
+.store-page .content .cards .card .header .brand img {
+  width: 100%;
+}
+
+.store-page .content .cards .card .header .share {
+  background-color: transparent;
+  border: none;
+  max-width: 50px;
+}
+
+.store-page .content .cards .card .header .share img {
+  width: 100%;
+  height: 100%;
+}
+
+.store-page .content .cards .card .content {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 5%;
+}
+
+.store-page .content .cards .card .content h3 {
+  font-weight: 400;
+}
+
+.store-page .content .cards .card .footer {
+  margin-top: 3%;
+}
+
+.store-page .content .cards .card .footer .copoun {
+  background-color: #ebebeb;
+  padding: 7px;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+}
+
+.store-page .content .cards .card .footer .copoun span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.store-page .content .cards .card .footer .copoun button {
+  background-color: #03ad94;
+  padding: 3px 25px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  float: left;
+}
+
+.store-page .content .cards .card .footer .offer {
   width: 100%;
   background-color: #03ad94;
   padding: 10px;
