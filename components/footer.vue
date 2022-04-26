@@ -3,12 +3,9 @@
     <ul>
       <li>
         <h3>{{ $t("stores") }}</h3>
-        <NuxtLink to="/">Noon</NuxtLink>
-        <NuxtLink to="/">Noon</NuxtLink>
-        <NuxtLink to="/">Noon</NuxtLink>
-        <NuxtLink to="/">Noon</NuxtLink>
-        <NuxtLink to="/">Noon</NuxtLink>
-        <NuxtLink to="/">Noon</NuxtLink>
+        <NuxtLink to="/" v-for="store in stores" :key="store.id">
+          {{ store[`title_${locale}`] }}
+        </NuxtLink>
       </li>
       <li>
         <h3>{{ $t("short-links") }}</h3>
@@ -40,7 +37,20 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      stores: [],
+      locale: this.$i18n.locale,
+    };
+  },
+  mounted() {
+    this.$axios
+      .$get("/common-stores/12")
+      .then((result) => {
+        this.stores = result;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
 };
 </script>
