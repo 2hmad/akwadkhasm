@@ -161,7 +161,7 @@ button {
 }
 
 .headers .header .brand {
-  max-width: 65px;
+  max-width: 160px;
 }
 
 .headers .header .brand img {
@@ -655,11 +655,16 @@ button {
 }
 
 .store-page .content .cards .card .header .brand {
-  max-width: 90px;
+  width: 60px;
+  height: 60px;
+  padding-bottom: 10px;
 }
 
 .store-page .content .cards .card .header .brand img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .store-page .content .cards .card .header .share {
@@ -744,9 +749,6 @@ button {
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   gap: 50px;
 }
 

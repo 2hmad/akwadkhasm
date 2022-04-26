@@ -25,7 +25,9 @@
                     {{ store[`title_${locale}`] }}
                     {{ new Date().getFullYear() }} {{ $t("active-coupons") }}
                   </h1>
-                  <p style="display: block">11 {{ $t("coupons") }}</p>
+                  <p style="display: block">
+                    {{ coupons.length }} {{ $t("coupons") }}
+                  </p>
                 </div>
               </div>
               <div class="cards">
@@ -62,7 +64,7 @@
                       v-if="coupon.type == 'coupon'"
                     >
                       <div class="coupon">
-                        <span> DG2 </span>
+                        <span> {{ coupon.coupon }} </span>
                         <button>{{ $t("copy") }}</button>
                       </div>
                     </NuxtLink>

@@ -42,8 +42,10 @@
         <li>
           <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
         </li>
-        <li v-for="n in 10">
-          <NuxtLink to="/">الكترونيات</NuxtLink>
+        <li v-for="cat in cats" :key="cat.id">
+          <NuxtLink :to="`/categories/${cat[`title_en`].toLowerCase()}`">
+            {{ cat[`title_${locale}`] }}
+          </NuxtLink>
         </li>
       </ul>
       <div class="open" @click="openSideBar">
@@ -58,8 +60,10 @@
           <li>
             <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
           </li>
-          <li v-for="n in 10">
-            <NuxtLink to="/">الكترونيات</NuxtLink>
+          <li v-for="cat in cats" :key="cat.id">
+            <NuxtLink :to="`/categories/${cat[`title_en`].toLowerCase()}`">
+              {{ cat[`title_${locale}`] }}
+            </NuxtLink>
           </li>
         </ul>
       </div>
@@ -71,7 +75,19 @@ export default {
   data() {
     return {
       searchKeyword: "",
+      cats: [],
+      locale: this.$i18n.locale,
     };
+  },
+  mounted() {
+    this.$axios
+      .$get("/categories-limit/12")
+      .then((result) => {
+        this.cats = result;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
   methods: {
     changeLocale(locale) {

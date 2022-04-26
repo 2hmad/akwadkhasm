@@ -10,15 +10,22 @@
                 {{ $t("all-categories") }}
               </h1>
               <div class="cats">
-                <div class="cat" v-for="n in 4">
+                <div class="cat" v-for="cat in cats" :key="cat.id">
                   <div class="cat-h">
-                    <NuxtLink to="/">
-                      <h4>electronics-الالكترونيات</h4>
+                    <NuxtLink :to="`/categories/${cat.title_en.toLowerCase()}`">
+                      <h4>{{ cat[`title_${locale}`] }}</h4>
                     </NuxtLink>
                   </div>
                   <div class="cat-subs">
-                    <NuxtLink to="/">تلفزيونات</NuxtLink>
-                    <NuxtLink to="/">تلفزيونات</NuxtLink>
+                    <NuxtLink
+                      :to="`/categories/${cat.title_en.toLowerCase()}/${
+                        subCat.id
+                      }`"
+                      v-for="subCat in cat.subcategory"
+                      :key="subCat.id"
+                    >
+                      {{ subCat[`title_${locale}`] }}
+                    </NuxtLink>
                   </div>
                 </div>
               </div>
@@ -37,7 +44,20 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      cats: [],
+      locale: this.$i18n.locale,
+    };
+  },
+  mounted() {
+    this.$axios
+      .$get("/categories")
+      .then((result) => {
+        this.cats = result;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
 };
 </script>
