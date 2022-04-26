@@ -43,7 +43,7 @@ export default {
   },
   mounted() {
     this.$axios
-      .$get("http://127.0.0.1:8000/api/stores")
+      .$get("/stores")
       .then((result) => {
         this.stores = result;
       })

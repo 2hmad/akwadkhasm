@@ -1,12 +1,9 @@
 <template>
   <nav class="headers">
     <div class="header">
-      <div
-        class="brand"
-        style="width: 200px; height: 84px; border: 1px solid #ccc"
-      >
+      <div class="brand">
         <a href="/">
-          <img src="" :alt="`${$t('akwadkhasm')}`" />
+          <img src="/CODE.svg" :alt="`${$t('akwadkhasm')}`" />
         </a>
       </div>
       <div class="search">
