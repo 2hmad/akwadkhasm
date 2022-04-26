@@ -13,11 +13,11 @@
                 {{ $t("coupons-and-discounts") }} {{ new Date().getFullYear() }}
               </h2>
               <div class="cards">
-                <div class="card" v-for="n in 6">
-                  <NuxtLink to="/">
+                <div class="card" v-for="store in stores" :key="store.id">
+                  <NuxtLink :to="`/stores/${store.id}`">
                     <img
-                      src="https://cdn.almowafir.com/files/w200_noon.png"
-                      alt=""
+                      :src="`http://127.0.0.1:8000/storage/stores/${store.pic}`"
+                      :alt="store.title_en"
                     />
                   </NuxtLink>
                 </div>
@@ -36,8 +36,20 @@
 
 <script>
 export default {
-  date() {
-    return {};
+  data() {
+    return {
+      stores: [],
+    };
+  },
+  mounted() {
+    this.$axios
+      .$get("http://127.0.0.1:8000/api/stores")
+      .then((result) => {
+        this.stores = result;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
 };
 </script>

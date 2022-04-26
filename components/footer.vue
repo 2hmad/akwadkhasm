@@ -12,9 +12,9 @@
       </li>
       <li>
         <h3>{{ $t("short-links") }}</h3>
-        <NuxtLink to="/">{{ $t("all-stores") }}</NuxtLink>
-        <NuxtLink to="/">{{ $t("about-us") }}</NuxtLink>
-        <NuxtLink to="/">{{ $t("contact-us") }}</NuxtLink>
+        <NuxtLink to="/stores">{{ $t("all-stores") }}</NuxtLink>
+        <NuxtLink to="/about">{{ $t("about-us") }}</NuxtLink>
+        <NuxtLink to="/contact">{{ $t("contact-us") }}</NuxtLink>
       </li>
       <li>
         <h3>{{ $t("informations") }}</h3>

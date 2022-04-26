@@ -1,0 +1,13 @@
+.about-page {
+  .container {
+    margin-top: 3%;
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 15px;
+      color: $secondary;
+      line-height: 2.5em;
+    }
+  }
+}

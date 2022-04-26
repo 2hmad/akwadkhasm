@@ -13,22 +13,27 @@
         <div class="lang">
           <a
             href="#"
-            @click.prevent="$i18n.setLocale('en')"
+            @click.prevent="changeLocale('en')"
             v-if="$i18n.locale == 'ar'"
           >
             English
           </a>
           <a
             href="#"
-            @click.prevent="$i18n.setLocale('ar')"
+            @click.prevent="changeLocale('ar')"
             v-else-if="$i18n.locale == 'en'"
           >
             العربية
           </a>
         </div>
-        <form>
-          <input type="text" :placeholder="$t('search-for-coupons')" />
-          <button><img src="/icons/icons8-search.svg" /></button>
+        <form method="POST" :action="`/search/${searchKeyword}`">
+          <input
+            type="text"
+            :placeholder="$t('search-for-coupons')"
+            v-model="searchKeyword"
+            required
+          />
+          <button type="submit"><img src="/icons/icons8-search.svg" /></button>
         </form>
       </div>
     </div>
@@ -67,9 +72,15 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      searchKeyword: "",
+    };
   },
   methods: {
+    changeLocale(locale) {
+      this.$i18n.setLocale(locale);
+      window.location.reload();
+    },
     openSideBar() {
       document.querySelector(".sidebar").style.display = "flex";
     },

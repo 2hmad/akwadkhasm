@@ -61,7 +61,7 @@
 
 <script>
 export default {
-  date() {
+  data() {
     return {};
   },
   computed: {

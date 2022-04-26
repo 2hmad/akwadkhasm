@@ -1,0 +1,22 @@
+.contact-page {
+  .container {
+    margin-top: 3%;
+    h1 {
+      font-size: 20px;
+      margin-bottom: 2%;
+    }
+    .email,
+    .whatsapp {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      img {
+        max-width: 50px;
+      }
+      a {
+        color: $primary;
+        font-size: 17px;
+      }
+    }
+  }
+}

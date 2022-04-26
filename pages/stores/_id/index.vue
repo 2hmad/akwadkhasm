@@ -15,13 +15,14 @@
               </swiper>
             </div>
             <div class="content">
-              <div class="header">
+              <div class="heading">
                 <img
-                  src="https://cdn.almowafir.com/store_logos/noon_dg4_ar.png"
+                  :src="`http://127.0.0.1:8000/storage/stores/${store.pic}`"
                 />
                 <div>
                   <h1>
-                    {{ $t("coupons-and-discounts") }} نون
+                    {{ $t("coupons-and-discounts") }}
+                    {{ store[`title_${locale}`] }}
                     {{ new Date().getFullYear() }} {{ $t("active-coupons") }}
                   </h1>
                   <p style="display: block">11 {{ $t("coupons") }}</p>
@@ -88,13 +89,26 @@ export default {
   directives: {
     swiper: directive,
   },
-  date() {
-    return {};
+  data() {
+    return {
+      locale: this.$i18n.locale,
+      store: [],
+    };
   },
   computed: {
     webShareApiSupported() {
       return navigator.share;
     },
+  },
+  mounted() {
+    this.$axios
+      .$get(`http://127.0.0.1:8000/api/stores/${this.$route.params.id}`)
+      .then((result) => {
+        this.store = result;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
   methods: {
     shareViaWebShare(title, url) {
