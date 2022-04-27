@@ -6,7 +6,7 @@
         <img src="/icons/icons8-check-circle.svg" />
         <h2>{{ $t("coupon-copied") }}</h2>
         <p>{{ $t("use-it-in-cart") }}</p>
-        <div class="coupon">{{ this.$route.params.id }}</div>
+        <div class="coupon">{{ coupon.coupon }}</div>
         <p>{{ $t("we-will-redirect-you-within") }}</p>
         <h3 class="counter">{{ timer }}</h3>
       </div>
@@ -19,10 +19,19 @@ export default {
   data() {
     return {
       timer: 3,
+      coupon: [],
     };
   },
   mounted() {
-    navigator.clipboard.writeText(this.$route.params.id);
+    this.$axios
+      .$get(`/coupon/${this.$route.params.id}`)
+      .then((result) => {
+        this.coupon = result;
+        navigator.clipboard.writeText(this.coupon.coupon);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
   watch: {
     timer: {
@@ -33,7 +42,7 @@ export default {
           }, 1000);
         }
         if (value == 0) {
-          // window.location.href = "https://google.com";
+          window.location.href = this.coupon.store.website;
         }
       },
       immediate: true,

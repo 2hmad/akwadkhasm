@@ -3,39 +3,47 @@
     <div class="search-page">
       <Navbar />
       <div class="container">
-        <h2>{{ $t("search-results") }} (3)</h2>
+        <h2>{{ $t("search-results") }} ({{ coupons.length }})</h2>
         <div class="cards">
-          <div class="card" v-for="n in 3">
+          <div class="card" v-for="coupon in coupons" :key="coupon.id">
             <div class="header">
-              <NuxtLink to="/">
+              <NuxtLink :to="`/stores/${coupon.store.id}`">
                 <div class="brand">
                   <img
-                    src="https://cdn.almowafir.com/files/w200_noon.png"
+                    :src="`http://127.0.0.1:8000/storage/stores/${coupon.store.pic}`"
                     alt=""
                   />
                 </div>
               </NuxtLink>
               <button
                 class="share"
-                @click="shareViaWebShare('test title', 'test content')"
+                @click="
+                  shareViaWebShare(
+                    coupon[`title_${locale}`],
+                    `https://akwadkhasm.com/redirect/${coupon.id}`
+                  )
+                "
               >
                 <img src="/icons/icons8-share.svg" />
               </button>
             </div>
             <div class="content">
-              <NuxtLink to="/">
-                <h3>خصم حتى 20% على الموبايلات + 10% إضافي</h3>
+              <NuxtLink :to="`/redirect/${coupon.id}`">
+                <h3>{{ coupon[`title_${locale}`] }}</h3>
               </NuxtLink>
             </div>
             <div class="footer">
-              <NuxtLink to="/">
+              <NuxtLink
+                :to="`/redirect/${coupon.id}`"
+                v-if="coupon.type == 'coupon'"
+              >
                 <div class="coupon">
-                  <span> DG2 </span>
+                  <span> {{ coupon.coupon }} </span>
                   <button>{{ $t("copy") }}</button>
                 </div>
               </NuxtLink>
-              <a href="/" target="_blank">
-                <button class="offer" style="display: none">
+              <a :href="`${coupon.offer_link}`" target="_blank" v-else>
+                <button class="offer">
                   {{ $t("get-the-offer") }}
                 </button>
               </a>
@@ -51,7 +59,35 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      keyword: this.$route.params.title,
+      coupons: [],
+      locale: this.$i18n.locale,
+    };
+  },
+  mounted() {
+    this.$axios
+      .$get(`/search/${this.keyword}`)
+      .then((result) => {
+        this.coupons = result;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  },
+  computed: {
+    webShareApiSupported() {
+      return navigator.share;
+    },
+  },
+  methods: {
+    shareViaWebShare(title, url) {
+      navigator.share({
+        title: title,
+        text: title,
+        url: url,
+      });
+    },
   },
 };
 </script>

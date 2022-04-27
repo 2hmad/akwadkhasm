@@ -6,13 +6,7 @@
         <div class="sides">
           <div class="side">
             <div class="carousel">
-              <swiper class="swiper">
-                <swiper-slide>
-                  <a href="#">
-                    <img src="https://cdn.almowafir.com/1/Shein-AR.jpeg" />
-                  </a>
-                </swiper-slide>
-              </swiper>
+              <Carousel />
             </div>
             <div class="content">
               <div class="heading">
@@ -89,16 +83,7 @@
 </template>
 
 <script>
-import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
 export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  directives: {
-    swiper: directive,
-  },
   data() {
     return {
       locale: this.$i18n.locale,

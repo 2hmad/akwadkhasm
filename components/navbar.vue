@@ -55,9 +55,6 @@
         <img src="/icons/close.svg" @click="closeSideBar" />
         <ul>
           <li>
-            <NuxtLink to="/"> {{ $t("offers") }} </NuxtLink>
-          </li>
-          <li>
             <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
           </li>
           <li v-for="cat in cats" :key="cat.id">
