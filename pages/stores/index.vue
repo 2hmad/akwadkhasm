@@ -36,6 +36,67 @@
 
 <script>
 export default {
+  head: {
+    title: "جميع المتاجر - اكواد خصم",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "افضل موقع كوبونات خصم - موقع اكواد خصم من افضل مواقع كوبونات الخصم في الوطن العربي لتوفير المال عند التسوق سوف تجد فيه اي كود خصم",
+      },
+      {
+        property: "og:title",
+        content: "جميع المتاجر - اكواد خصم",
+      },
+      {
+        property: "og:image",
+        content: "https://akwadkhasm.com/logo.jpg",
+      },
+      {
+        property: "og:url",
+        content: "https://akwadkhasm.com",
+      },
+      {
+        property: "og:site_name",
+        content: "اكواد خصم",
+      },
+      {
+        property: "og:description",
+        content:
+          "افضل موقع كوبونات خصم - موقع اكواد خصم من افضل مواقع كوبونات الخصم في الوطن العربي لتوفير المال عند التسوق سوف تجد فيه اي كود خصم",
+      },
+      {
+        property: "og:type",
+        content: "Website",
+      },
+      {
+        property: "twitter:site",
+        content: "@akwadkhasm",
+      },
+      {
+        property: "twitter:image",
+        content: "https://akwadkhasm.com/logo.jpg",
+      },
+      {
+        property: "twitter:description",
+        content:
+          "افضل موقع كوبونات خصم - موقع اكواد خصم من افضل مواقع كوبونات الخصم في الوطن العربي لتوفير المال عند التسوق سوف تجد فيه اي كود خصم",
+      },
+      {
+        property: "twitter:creator",
+        content: "@akwadkhasm",
+      },
+      {
+        property: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        property: "twitter:title",
+        content: "جميع المتاجر - اكواد خصم",
+      },
+    ],
+  },
   data() {
     return {
       stores: [],

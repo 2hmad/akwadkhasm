@@ -89,12 +89,8 @@ export default {
       locale: this.$i18n.locale,
       store: [],
       coupons: [],
+      slug: this.$route.params.id,
     };
-  },
-  computed: {
-    webShareApiSupported() {
-      return navigator.share;
-    },
   },
   mounted() {
     this.$axios
@@ -113,6 +109,11 @@ export default {
       .catch((err) => {
         console.log(err);
       });
+  },
+  computed: {
+    webShareApiSupported() {
+      return navigator.share;
+    },
   },
   methods: {
     shareViaWebShare(title, url) {

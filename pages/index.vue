@@ -72,6 +72,67 @@
 
 <script>
 export default {
+  head: {
+    title: "الرئيسية - اكواد خصم",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "المنصة الأكبر والأضخم مليئة بالكوبونات وعروض الخصم من أضخم مواقع التسوق الإلكتروني. من الان نوفر على كل شروة أونلاين باستخدام كوبونات الخصم. عروض خصم نون",
+      },
+      {
+        property: "og:title",
+        content: "الرئيسية - اكواد خصم",
+      },
+      {
+        property: "og:image",
+        content: "https://akwadkhasm.com/logo.jpg",
+      },
+      {
+        property: "og:url",
+        content: "https://akwadkhasm.com",
+      },
+      {
+        property: "og:site_name",
+        content: "اكواد خصم",
+      },
+      {
+        property: "og:description",
+        content:
+          "المنصة الأكبر والأضخم مليئة بالكوبونات وعروض الخصم من أضخم مواقع التسوق الإلكتروني. من الان نوفر على كل شروة أونلاين باستخدام كوبونات الخصم. عروض خصم نون",
+      },
+      {
+        property: "og:type",
+        content: "Website",
+      },
+      {
+        property: "twitter:site",
+        content: "@akwadkhasm",
+      },
+      {
+        property: "twitter:image",
+        content: "https://akwadkhasm.com/logo.jpg",
+      },
+      {
+        property: "twitter:description",
+        content:
+          "المنصة الأكبر والأضخم مليئة بالكوبونات وعروض الخصم من أضخم مواقع التسوق الإلكتروني. من الان نوفر على كل شروة أونلاين باستخدام كوبونات الخصم. عروض خصم نون",
+      },
+      {
+        property: "twitter:creator",
+        content: "@akwadkhasm",
+      },
+      {
+        property: "twitter:card",
+        content: "summary_large_image",
+      },
+      {
+        property: "twitter:title",
+        content: "الرئيسية - اكواد خصم",
+      },
+    ],
+  },
   data() {
     return {
       coupons: [],

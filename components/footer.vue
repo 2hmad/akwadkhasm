@@ -3,7 +3,11 @@
     <ul>
       <li>
         <h3>{{ $t("stores") }}</h3>
-        <NuxtLink to="/" v-for="store in stores" :key="store.id">
+        <NuxtLink
+          :to="`/stores/${store.id}`"
+          v-for="store in stores"
+          :key="store.id"
+        >
           {{ store[`title_${locale}`] }}
         </NuxtLink>
       </li>
