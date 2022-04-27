@@ -7,7 +7,7 @@
         </a>
       </div>
       <div class="search">
-        <div class="lang">
+        <!-- <div class="lang">
           <a
             href="#"
             @click.prevent="changeLocale('en')"
@@ -22,7 +22,7 @@
           >
             العربية
           </a>
-        </div>
+        </div> -->
         <form method="POST" :action="`/search/${searchKeyword}`">
           <input
             type="text"

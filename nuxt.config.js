@@ -36,20 +36,16 @@ export default {
 
   sitemap: {
     hostname: "http://localhost:3000",
-    generate: true,
   },
 
   i18n: {
-    locales: [
-      { code: "ar", iso: "ar-EG", file: "ar.json", name: "Arabic" },
-      { code: "en", iso: "en-US", file: "en.json", name: "English" },
-    ],
+    locales: [{ code: "ar", iso: "ar-EG", file: "ar.json", name: "Arabic" }],
+    strategy: "no_prefix",
     defaultLocale: "ar",
     fallbackLocale: "ar",
-    strategy: "no_prefix",
     langDir: "lang/",
-    // lazy: true,
-    // seo: true,
+    seo: true,
+    lazy: true,
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
