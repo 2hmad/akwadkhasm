@@ -24,14 +24,20 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ["@/modules/sitemapRouteGenerator"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "@nuxtjs/i18n",
+    "@nuxtjs/sitemap",
   ],
+
+  sitemap: {
+    hostname: "http://localhost:3000",
+    generate: true,
+  },
 
   i18n: {
     locales: [
