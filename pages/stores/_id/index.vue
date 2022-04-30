@@ -11,7 +11,7 @@
             <div class="content">
               <div class="heading">
                 <img
-                  :src="`http://127.0.0.1:8000/storage/stores/${store.pic}`"
+                  :src="`http://admin.akwadkhasm.com/storage/stores/${store.pic}`"
                 />
                 <div>
                   <h1>
@@ -30,7 +30,7 @@
                     <NuxtLink :to="`/stores/${coupon.store.id}`">
                       <div class="brand">
                         <img
-                          :src="`http://127.0.0.1:8000/storage/stores/${coupon.store.pic}`"
+                          :src="`http://admin.akwadkhasm.com/storage/stores/${coupon.store.pic}`"
                           alt=""
                         />
                       </div>

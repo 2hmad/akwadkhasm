@@ -2,7 +2,9 @@
   <swiper class="swiper">
     <swiper-slide v-for="carousel in carousels" :key="carousel.id">
       <a :href="`${carousel.link}`">
-        <img :src="`http://127.0.0.1:8000/storage/carousels/${carousel.pic}`" />
+        <img
+          :src="`http://admin.akwadkhasm.com/storage/carousels/${carousel.pic}`"
+        />
       </a>
     </swiper-slide>
   </swiper>

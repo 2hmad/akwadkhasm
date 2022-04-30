@@ -7,7 +7,7 @@
           <NuxtLink :to="`/stores/${store.id}`">
             <div class="store">
               <img
-                :src="`http://127.0.0.1:8000/storage/stores/${store.pic}`"
+                :src="`http://admin.akwadkhasm.com/storage/stores/${store.pic}`"
                 :alt="store.title_en"
               />
             </div>

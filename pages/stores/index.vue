@@ -16,7 +16,7 @@
                 <div class="card" v-for="store in stores" :key="store.id">
                   <NuxtLink :to="`/stores/${store.id}`">
                     <img
-                      :src="`http://127.0.0.1:8000/storage/stores/${store.pic}`"
+                      :src="`http://admin.akwadkhasm.com/storage/stores/${store.pic}`"
                       :alt="store.title_en"
                     />
                   </NuxtLink>
