@@ -58,7 +58,7 @@
             <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
           </li>
           <li v-for="cat in cats" :key="cat.id">
-            <NuxtLink :to="`/categories/${cat[`title`].toLowerCase()}`">
+            <NuxtLink :to="`/categories/${cat.id}`">
               {{ cat.title }}
             </NuxtLink>
           </li>
