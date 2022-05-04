@@ -50,7 +50,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: "http://admin.akwadkhasm.com/api",
+    baseURL: "https://admin.akwadkhasm.com/api",
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
