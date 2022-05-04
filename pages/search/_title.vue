@@ -3,7 +3,28 @@
     <div class="search-page">
       <Navbar />
       <div class="container">
-        <h2>{{ $t("search-results") }} ({{ coupons.length }})</h2>
+        <h2>
+          {{ $t("search-results") }} ({{ coupons.length + stores.length }})
+        </h2>
+        <div class="cards">
+          <div
+            class="card"
+            v-for="store in stores"
+            :key="store.id"
+            style="width: 200px; height: 100px"
+          >
+            <NuxtLink
+              :to="`/stores/${store.id}`"
+              style="width: 100%; height: 100%"
+            >
+              <img
+                :src="`http://admin.akwadkhasm.com/storage/stores/${store.pic}`"
+                :alt="store.title"
+                style="width: 100%; height: 100%; object-fit: contain"
+              />
+            </NuxtLink>
+          </div>
+        </div>
         <div class="cards">
           <div class="card" v-for="coupon in coupons" :key="coupon.id">
             <div class="header">
@@ -62,6 +83,7 @@ export default {
     return {
       keyword: this.$route.params.title,
       coupons: [],
+      stores: [],
       locale: this.$i18n.locale,
     };
   },
@@ -70,6 +92,14 @@ export default {
       .$get(`/search/${this.keyword}`)
       .then((result) => {
         this.coupons = result;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    this.$axios
+      .$get(`/search-store/${this.keyword}`)
+      .then((result) => {
+        this.stores = result;
       })
       .catch((err) => {
         console.log(err);
