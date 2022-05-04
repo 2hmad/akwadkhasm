@@ -1,7 +1,7 @@
 <template>
-  <swiper class="swiper">
+  <swiper class="swiper" :options="swiperOptions">
     <swiper-slide v-for="carousel in carousels" :key="carousel.id">
-      <a :href="`${carousel.url}`" target="_blank">
+      <a :href="`${carousel.link}`" target="_blank">
         <img
           :src="`http://admin.akwadkhasm.com/storage/carousels/${carousel.pic}`"
         />
@@ -23,6 +23,12 @@ export default {
   data() {
     return {
       carousels: [],
+      swiperOptions: {
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: true,
+        },
+      },
     };
   },
   mounted() {
