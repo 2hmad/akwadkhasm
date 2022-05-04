@@ -8,7 +8,7 @@
             <div class="store">
               <img
                 :src="`http://admin.akwadkhasm.com/storage/stores/${store.pic}`"
-                :alt="store.title_en"
+                :alt="store.title"
               />
             </div>
           </NuxtLink>

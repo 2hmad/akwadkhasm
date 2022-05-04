@@ -19,7 +19,7 @@
                 class="share"
                 @click="
                   shareViaWebShare(
-                    coupon[`title_${locale}`],
+                    coupon.title,
                     `https://akwadkhasm.com/redirect/${coupon.id}`
                   )
                 "
@@ -29,7 +29,7 @@
             </div>
             <div class="content">
               <NuxtLink :to="`/redirect/${coupon.id}`">
-                <h3>{{ coupon[`title_${locale}`] }}</h3>
+                <h3>{{ coupon.title }}</h3>
               </NuxtLink>
             </div>
             <div class="footer">

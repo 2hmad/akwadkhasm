@@ -12,19 +12,17 @@
               <div class="cats">
                 <div class="cat" v-for="cat in cats" :key="cat.id">
                   <div class="cat-h">
-                    <NuxtLink :to="`/categories/${cat.title_en.toLowerCase()}`">
-                      <h4>{{ cat[`title_${locale}`] }}</h4>
+                    <NuxtLink :to="`/categories/${cat.id}`">
+                      <h4>{{ cat.title }}</h4>
                     </NuxtLink>
                   </div>
                   <div class="cat-subs">
                     <NuxtLink
-                      :to="`/categories/${cat.title_en.toLowerCase()}/${
-                        subCat.id
-                      }`"
+                      :to="`/categories/${cat.id}/${subCat.id}`"
                       v-for="subCat in cat.subcategory"
                       :key="subCat.id"
                     >
-                      {{ subCat[`title_${locale}`] }}
+                      {{ subCat.title }}
                     </NuxtLink>
                   </div>
                 </div>

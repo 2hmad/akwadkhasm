@@ -8,7 +8,7 @@
           v-for="store in stores"
           :key="store.id"
         >
-          {{ store[`title_${locale}`] }}
+          {{ store.title }}
         </NuxtLink>
       </li>
       <li>

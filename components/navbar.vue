@@ -43,8 +43,8 @@
           <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
         </li>
         <li v-for="cat in cats" :key="cat.id">
-          <NuxtLink :to="`/categories/${cat[`title_en`].toLowerCase()}`">
-            {{ cat[`title_${locale}`] }}
+          <NuxtLink :to="`/categories/${cat.id}`">
+            {{ cat.title }}
           </NuxtLink>
         </li>
       </ul>
@@ -58,8 +58,8 @@
             <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
           </li>
           <li v-for="cat in cats" :key="cat.id">
-            <NuxtLink :to="`/categories/${cat[`title_en`].toLowerCase()}`">
-              {{ cat[`title_${locale}`] }}
+            <NuxtLink :to="`/categories/${cat[`title`].toLowerCase()}`">
+              {{ cat.title }}
             </NuxtLink>
           </li>
         </ul>

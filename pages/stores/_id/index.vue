@@ -16,7 +16,7 @@
                 <div>
                   <h1>
                     {{ $t("coupons-and-discounts") }}
-                    {{ store[`title_${locale}`] }}
+                    {{ store.title }}
                     {{ new Date().getFullYear() }} {{ $t("active-coupons") }}
                   </h1>
                   <p style="display: block">
@@ -39,7 +39,7 @@
                       class="share"
                       @click="
                         shareViaWebShare(
-                          coupon[`title_${locale}`],
+                          coupon.title,
                           `https://akwadkhasm.com/redirect/${coupon.id}`
                         )
                       "
@@ -49,7 +49,7 @@
                   </div>
                   <div class="content">
                     <NuxtLink :to="`/redirect/${coupon.id}`">
-                      <h3>{{ coupon[`title_${locale}`] }}</h3>
+                      <h3>{{ coupon.title }}</h3>
                     </NuxtLink>
                   </div>
                   <div class="footer">

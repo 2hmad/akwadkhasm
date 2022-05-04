@@ -1,10 +1,8 @@
 <template>
   <swiper class="swiper">
-    <swiper-slide v-for="carousel in carousels" :key="carousel.id">
-      <a :href="`${carousel.link}`">
-        <img
-          :src="`http://admin.akwadkhasm.com/storage/carousels/${carousel.pic}`"
-        />
+    <swiper-slide>
+      <a href="#">
+        <img src="https://via.placeholder.com/900x300?text=Ad+Preview" />
       </a>
     </swiper-slide>
   </swiper>
