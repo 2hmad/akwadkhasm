@@ -12,7 +12,9 @@
             </div>
             <div class="whatsapp">
               <img src="/icons/icons8-whatsapp.svg" />
-              <a href="https://wa.me/+20000000?text=مرحباً احتاج الي المساعدة">
+              <a
+                href="https://wa.me/+201111503083?text=مرحباً احتاج الي المساعدة"
+              >
                 {{ $t("whatsapp") }}
               </a>
             </div>

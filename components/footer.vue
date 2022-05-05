@@ -25,9 +25,15 @@
       <li class="social">
         <h3>{{ $t("follow-us") }}</h3>
         <div style="margin-top: 15px; gap: 10px; display: flex">
-          <a href="#"><img src="/icons/icons8-facebook.svg" /></a>
-          <a href="#"><img src="/icons/icons8-twitter.svg" /></a>
-          <a href="#"><img src="/icons/icons8-telegram-app.svg" /></a>
+          <a href="https://www.facebook.com/akwadkhasmm">
+            <img src="/icons/icons8-facebook.svg" />
+          </a>
+          <a href="https://twitter.com/mahmouedsaid15">
+            <img src="/icons/icons8-twitter.svg" />
+          </a>
+          <a href="https://www.instagram.com/akwadkhasm7/">
+            <img src="/icons/icons8-instagram.svg" />
+          </a>
         </div>
       </li>
     </ul>
