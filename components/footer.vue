@@ -33,6 +33,16 @@
     </ul>
     <div class="rights">
       <span>
+        تمت التصميم والبرمجة بواسطة شركة
+        <a
+          href="https://digitwires.com"
+          style="text-decoration: underline"
+          target="_blank"
+        >
+          ديجيت وايرز
+        </a>
+      </span>
+      <span>
         &copy; {{ $t("all-rights-reserved") }} {{ $t("akwadkhasm") }}
       </span>
     </div>
@@ -48,7 +58,7 @@ export default {
   },
   mounted() {
     this.$axios
-      .$get("/common-stores/12")
+      .$get("/common-stores/7")
       .then((result) => {
         this.stores = result;
       })

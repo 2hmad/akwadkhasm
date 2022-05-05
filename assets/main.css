@@ -363,7 +363,12 @@ button {
 
 .footer-page .rights {
   margin-top: 2%;
-  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #777777;
 }
 

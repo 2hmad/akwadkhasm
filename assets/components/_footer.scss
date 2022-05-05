@@ -25,7 +25,8 @@
   }
   .rights {
     margin-top: 2%;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
     color: #777777;
   }
 }
