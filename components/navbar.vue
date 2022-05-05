@@ -40,6 +40,12 @@
           <NuxtLink to="/"> {{ $t("offers") }} </NuxtLink>
         </li> -->
         <li>
+          <NuxtLink to="/">{{ $t("home") }}</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/stores">{{ $t("all-stores") }}</NuxtLink>
+        </li>
+        <li>
           <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
         </li>
         <li v-for="cat in cats" :key="cat.id">
