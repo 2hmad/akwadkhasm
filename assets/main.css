@@ -334,6 +334,7 @@ button {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 15px;
 }
 
 .footer-page ul li {
@@ -370,6 +371,16 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #777777;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-page .rights {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .index-page .carousel {
