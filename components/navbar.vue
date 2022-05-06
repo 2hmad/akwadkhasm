@@ -48,11 +48,14 @@
         <li>
           <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
         </li>
-        <li v-for="cat in cats" :key="cat.id">
+        <li>
+          <NuxtLink to="/coupons">جميع الكوبونات</NuxtLink>
+        </li>
+        <!-- <li v-for="cat in cats" :key="cat.id">
           <NuxtLink :to="`/categories/${cat.id}`">
             {{ cat.title }}
           </NuxtLink>
-        </li>
+        </li> -->
       </ul>
       <div class="open" @click="openSideBar">
         <img src="/icons/bar.svg" />
@@ -61,13 +64,22 @@
         <img src="/icons/close.svg" @click="closeSideBar" />
         <ul>
           <li>
+            <NuxtLink to="/">{{ $t("home") }}</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/stores">{{ $t("all-stores") }}</NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/categories">{{ $t("all-categories") }}</NuxtLink>
           </li>
-          <li v-for="cat in cats" :key="cat.id">
+          <li>
+            <NuxtLink to="/coupons">جميع الكوبونات</NuxtLink>
+          </li>
+          <!-- <li v-for="cat in cats" :key="cat.id">
             <NuxtLink :to="`/categories/${cat.id}`">
               {{ cat.title }}
             </NuxtLink>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -78,20 +90,20 @@ export default {
   data() {
     return {
       searchKeyword: "",
-      cats: [],
+      // cats: [],
       locale: this.$i18n.locale,
     };
   },
-  mounted() {
-    this.$axios
-      .$get("/categories-limit/12")
-      .then((result) => {
-        this.cats = result;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  },
+  // mounted() {
+  //   this.$axios
+  //     .$get("/categories-limit/12")
+  //     .then((result) => {
+  //       this.cats = result;
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // },
   methods: {
     changeLocale(locale) {
       this.$i18n.setLocale(locale);
