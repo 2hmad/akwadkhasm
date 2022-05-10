@@ -35,7 +35,8 @@ export default {
   ],
 
   sitemap: {
-    hostname: "http://localhost:3000",
+    hostname: "https://akwadkhasm.com",
+    routes: [],
   },
 
   i18n: {

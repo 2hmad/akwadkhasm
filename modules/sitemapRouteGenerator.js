@@ -1,11 +1,11 @@
-const sitemapRouteGenerator = function () {
-  this.nuxt.hook("generate:done", async (context) => {
+export default function () {
+  this.nuxt.hook("generate:done", (context) => {
     const routesToExclude = [];
-    const allRoutes = await Array.from(context.generatedRoutes);
-    const routes = await allRoutes.filter(
+    const allRoutes = Array.from(context.generatedRoutes);
+    const routes = allRoutes.filter(
       (route) => !routesToExclude.includes(route)
     );
-    this.nuxt.options.sitemap.routes = await [...routes];
+
+    this.nuxt.options.sitemap.routes = [...routes];
   });
-};
-export default sitemapRouteGenerator;
+}
