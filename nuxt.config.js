@@ -10,6 +10,11 @@ export default {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" },
+      {
+        name: "keywords",
+        content:
+          "discounts,discounts tires,dd's discounts,discount tire near me,discounts stores,discounts just eat,discounts codes,copon non,zero coupon bond,coupon bond,noon coupon,noon coupon code,coupons for 5 guys,coupon noon,coupon examples,a coupon,6 flags coupons,2022 promo codes,g coupons,2022 coupon insert schedule,coupons 2022,8 discount,2022 coupon schedule,disney 2022 discounts,jcp coupons 2022,2022 coupon book,new customer coupon,8 coupon,2022 coupons,4/20 discounts,2022 enjoy coupon book,h&m coupons 2022,xfinity 2022 deals,0 financing 2022,كوبونات وخصومات,كوبونات,كوبونات خصومات,كوبونات خصومات نمشي,كوبون خصومات 2b,6 principles of confucianism,كوبونات خصومات نون,كوبونات خصومات امازون,كوبونات خصومات سوق كوم,كوبونات الخصومات",
+      },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
