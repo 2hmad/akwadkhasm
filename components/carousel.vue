@@ -3,7 +3,8 @@
     <swiper-slide v-for="carousel in carousels" :key="carousel.id">
       <a :href="`${carousel.link}`" target="_blank">
         <img
-          :src="`http://admin.akwadkhasm.com/storage/carousels/${carousel.pic}`"
+          :data-src="`http://admin.akwadkhasm.com/storage/carousels/${carousel.pic}`"
+          v-lazy-load
         />
       </a>
     </swiper-slide>

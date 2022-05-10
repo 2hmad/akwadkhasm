@@ -414,11 +414,10 @@ button {
 }
 
 .index-page .content .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
   gap: 15px;
   margin-top: 3%;
@@ -426,11 +425,12 @@ button {
 
 .index-page .content .cards .card {
   background-color: white;
-  width: 442px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
   height: 250px;
   border-radius: 7px;
   padding: 15px;
-  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -629,11 +629,10 @@ button {
 }
 
 .store-page .content .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
   gap: 15px;
   margin-top: 3%;
