@@ -52,6 +52,7 @@ export default {
       .$get("/categories")
       .then((result) => {
         this.cats = result;
+        console.log("Done");
       })
       .catch((err) => {
         console.log(err);
