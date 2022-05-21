@@ -4,7 +4,10 @@
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
-        "serverFiles": ["./dist/sitemap.xml"]
+        "serverFiles": [
+          "./dist/sitemap.xml",
+          "./.nuxt/dist/sitemap-routes.json"
+        ]
       }
     }
   ]
