@@ -102,15 +102,11 @@ export default {
       stores: [],
     };
   },
-  mounted() {
-    this.$axios
+  async fetch() {
+    await this.$axios
       .$get("/stores")
-      .then((result) => {
-        this.stores = result;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+      .then((response) => (this.stores = response))
+      .catch((err) => console.log(err));
   },
 };
 </script>

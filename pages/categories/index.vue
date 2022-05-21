@@ -47,8 +47,8 @@ export default {
       locale: this.$i18n.locale,
     };
   },
-  mounted() {
-    this.$axios
+  async fetch() {
+    await this.$axios
       .$get("/categories")
       .then((result) => {
         this.cats = result;
