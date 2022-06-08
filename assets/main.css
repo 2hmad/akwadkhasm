@@ -617,6 +617,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .store-page .content .heading img {
