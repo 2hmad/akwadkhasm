@@ -70,10 +70,12 @@ button {
     &:nth-child(1) {
       max-width: 900px;
       width: 900px;
+      padding: 5px;
     }
     &:nth-child(2) {
       max-width: 370px;
       width: 370px;
+      padding: 10px;
       .fav-stores {
         h3 {
           font-weight: 500;

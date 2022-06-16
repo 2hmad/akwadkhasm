@@ -89,11 +89,13 @@ button {
 .sides .side:nth-child(1) {
   max-width: 900px;
   width: 900px;
+  padding: 5px;
 }
 
 .sides .side:nth-child(2) {
   max-width: 370px;
   width: 370px;
+  padding: 10px;
 }
 
 .sides .side:nth-child(2) .fav-stores h3 {
